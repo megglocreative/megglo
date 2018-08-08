@@ -2,6 +2,37 @@
 body {
   margin: 0;
 }
+.full{
+  width:100vw;
+  height:100vh;
+}
+/*COLOR SCHEMES*/
+.darkBlue{
+  background-color: #253850;
+}
+.yellow{
+  background-color: #E9B55D;
+}
+.white{
+  background-color: white;
+}
+.lightBlue{
+  background-color: #17517F;
+}
+.darkBlue .header a{
+  color:white;
+}
+.yellow .header a{
+  color:#253850;
+}
+.white .header a{
+  color:#253850;
+}
+.lightBlue .header a{
+  color:white;
+}
+
+/*STANDARD STYLES*/
 h1, h2, p, ul, li {
   font-family: sans-serif;
 }
@@ -12,7 +43,6 @@ ul.header li {
   margin: 0;
 }
 ul.header li a{
-  color: #253850;
   text-decoration: none;
   transition: background-size .4s ease, color .4s;
   background: linear-gradient(to bottom, transparent 40%, #E9B55D 0) top left/0% 60% no-repeat;
@@ -60,6 +90,19 @@ ul.topNav li a{
   letter-spacing: .1em;
 }
 
+/*SHOP HOVER COLORS*/
+.shopHover{
+  background-color: #253850;
+}
+.shopHover .header a{
+  color:#17517F;
+}
+.shopHover .header #shop{
+  color:white;
+}
+ul.header li .shop{
+  background: linear-gradient(to bottom, transparent 40%, #17517F 0) top left/0% 60% no-repeat;
+}
 
 /*when SHOP is hovered*/
 /*
