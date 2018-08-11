@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class Home extends Component {
 	componentDidMount(){
+		this.props.applyAnimation("");
 		this.props.updateNavLayout("fullScreen");
 		this.props.updateColorScheme("white");
 	}

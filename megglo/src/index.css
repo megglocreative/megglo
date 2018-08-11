@@ -2,37 +2,6 @@
 body {
   margin: 0;
 }
-.full{
-  width:100vw;
-  height:100vh;
-}
-/*COLOR SCHEMES*/
-.darkBlue{
-  background-color: #253850;
-}
-.yellow{
-  background-color: #E9B55D;
-}
-.white{
-  background-color: white;
-}
-.lightBlue{
-  background-color: #17517F;
-}
-.darkBlue .header a{
-  color:white;
-}
-.yellow .header a{
-  color:#253850;
-}
-.white .header a{
-  color:#253850;
-}
-.lightBlue .header a{
-  color:white;
-}
-
-/*STANDARD STYLES*/
 h1, h2, p, ul, li {
   font-family: sans-serif;
 }
@@ -43,13 +12,13 @@ ul.header li {
   margin: 0;
 }
 ul.header li a{
+  color: #253850;
   text-decoration: none;
   transition: background-size .4s ease, color .4s;
   background: linear-gradient(to bottom, transparent 40%, #E9B55D 0) top left/0% 60% no-repeat;
   padding: 0 6px 2px 6px;
   cursor: pointer;
 }
-
 
 /*FULL SCREEN*/
 .fullScreen .navLinks{
@@ -67,28 +36,6 @@ ul.fullScreen li a{
   letter-spacing: -.1rem;
 }
 
-.fullScreen .slideLeft{
-  /*animation*/
-  animation-name: slideLeft;
-  -webkit-animation-name: slideLeft;  
-  animation-duration: .5s; 
-  -webkit-animation-duration: .55s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out; 
-  -webkit-animation-timing-function: ease-in-out;   
-  visibility: visible !important;      
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-
 /*TOP NAV*/
 .topNav .navLinks{
   padding: 0;
@@ -96,29 +43,6 @@ ul.fullScreen li a{
   top: 0;
   margin: 0;
   right: 0;
-  /*animate in*/
-  animation-name: slideDown;
-  -webkit-animation-name: slideDown;  
-  animation-duration: .5s; 
-  -webkit-animation-duration: .5s;
-  animation-timing-function: ease;  
-  -webkit-animation-timing-function: ease;  
-  visibility: visible !important;           
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  60%{
-    transform: translateY(4%);
-  }
-  75%{
-    transform: translateY(-2%);
-  }
-  100%{
-    transform: translateY(0%);
-  }
 }
 
 ul.topNav li {
@@ -136,19 +60,6 @@ ul.topNav li a{
   letter-spacing: .1em;
 }
 
-/*SHOP HOVER COLORS*/
-.shopHover{
-  background-color: #253850;
-}
-.shopHover .header a{
-  color:#17517F;
-}
-.shopHover .header #shop{
-  color:white;
-}
-ul.header li .shop{
-  background: linear-gradient(to bottom, transparent 40%, #17517F 0) top left/0% 60% no-repeat;
-}
 
 /*when SHOP is hovered*/
 /*

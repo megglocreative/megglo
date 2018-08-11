@@ -17,9 +17,11 @@ class Main extends Component {
       layout: "topNav", //fullScreen or topNav, corresponding CSS classes reformat page
       colorScheme: "white", //white, yellow, darkBlue, lightBlue, shopHover
       lastColorScheme: "white",
+      animate: "",
     };
     this.updateNav = this.updateNav.bind(this);
     this.updateColor = this.updateColor.bind(this);
+    this.applyAnimation = this.applyAnimation.bind(this);
   }
   updateNav(a){
     this.setState({layout:a});
@@ -31,6 +33,9 @@ class Main extends Component {
   undoColor(){
     this.setState({colorScheme: this.state.lastColorScheme});
   }
+  applyAnimation(){
+    this.setState({animate:"slideLeft"});
+  }
   render() {
     return (
       <HashRouter>
@@ -38,19 +43,20 @@ class Main extends Component {
             <ul className={"header " + this.state.layout}>
               <NavLink exact to="/" id="logo"><img src={'./logo.svg'} alt=""/></NavLink>
               <div className="navLinks">
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-                <li><NavLink to="/personal">Playground</NavLink></li>
-                <li><NavLink onMouseEnter={() => this.updateColor("shopHover")} 
+                <li className={this.state.animate}><NavLink to="/about">About</NavLink></li>
+                <li className={this.state.animate}><NavLink to="/portfolio">Portfolio</NavLink></li>
+                <li className={this.state.animate}><NavLink to="/personal">Playground</NavLink></li>
+                <li className={this.state.animate}><NavLink onMouseEnter={() => this.updateColor("shopHover")} 
                   onMouseOut={() => this.undoColor()} to="/shop" id="shop" className="shop">Shop</NavLink>
                 </li>
+                
               </div>
             </ul>
             <div className="content">
-                <Route exact path="/" render={(props) => <Home updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
-                <Route path="/about" render={(props) => <About updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
-                <Route path="/personal" render={(props) => <Personal updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
-                <Route path="/portfolio" render={(props) => <Portfolio updateNavLayout={this.updateNav} updateColorScheme={this.updateColor} />}/>
+                <Route exact path="/" render={(props) => <Home applyAnimation={this.applyAnimation} updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
+                <Route path="/about" render={(props) => <About applyAnimation={this.applyAnimation} updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
+                <Route path="/personal" render={(props) => <Personal applyAnimation={this.applyAnimation} updateNavLayout={this.updateNav} updateColorScheme={this.updateColor}/>}/>
+                <Route path="/portfolio" render={(props) => <Portfolio applyAnimation={this.applyAnimation} updateNavLayout={this.updateNav} updateColorScheme={this.updateColor} />}/>
             </div>
           </div>
       </HashRouter>
