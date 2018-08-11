@@ -1,0 +1,9 @@
+var About = JSON.parse('
+About = { 
+    "primaryHeading"  : "Make every day an adventure",
+    "emphasizedText"  : "From traveling to a foreign country to trying an unfamiliar food to listening to a podcast that doesn’t share my political views,  I find adventure every day by trying new things and seeking out experiences that make me a little uncomfortable. I’m always striving to broaden my comfort zone and expand my world of possibilities.",
+    "columnHeader1" : "I’m currently working as a User Experience Designer.",
+    "columnBody1" : "Right now I work at a software company, but I believe the same principles can be applied to a much broader problem set. From buying a cup of coffee to choosing a book at the library, life is made of experiences and interactions with the world around us.",
+    "columnHeader2" : "I’m a Midwesterner living in Washington DC.",
+    "columnBody2" : "I’m currently working as a User Experience Designer at a software company, but I believe the same principles can be applied to a much broader problem set. From buying a cup of coffee to choosing a book at the library, life is made of experiences and interactions with the world around us."
+}');'

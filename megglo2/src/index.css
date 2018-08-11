@@ -6,35 +6,77 @@ body {
   width:100vw;
   height:100vh;
 }
-/*COLOR SCHEMES*/
-.darkBlue{
-  background-color: #253850;
-}
-.yellow{
-  background-color: #E9B55D;
-}
-.white{
-  background-color: white;
-}
-.lightBlue{
-  background-color: #17517F;
-}
-.darkBlue .header a{
-  color:white;
-}
-.yellow .header a{
-  color:#253850;
-}
-.white .header a{
-  color:#253850;
-}
-.lightBlue .header a{
-  color:white;
-}
+
 
 /*STANDARD STYLES*/
 h1, h2, p, ul, li {
   font-family: sans-serif;
+}
+h1{
+  font-family: Crimson Text;
+  font-weight: bold;
+  font-size: 5em;
+  line-height: .8em;
+  text-align: left;
+  letter-spacing: -.1rem;
+  /*list-style-type: none;
+  margin: 0;
+  text-decoration: none;
+  transition: background-size .4s ease, color .4s;
+  background: linear-gradient(to bottom, transparent 40%, #E9B55D 0) top left/100% 60% no-repeat;
+  padding: 0 6px 2px 6px;
+  cursor: pointer;*/
+}
+h2{
+
+}
+h3{
+  font-family: Crimson Text;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+h4{
+  font-family: Montserrat;
+  font-size: 1em;
+}
+p{
+  font-family: Crimson Text;
+  font-size: 1em;
+}
+.textContainer{
+  width:80vw;
+  max-width:600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.twoColumns{
+  position: inline-block;
+  display: block;
+  width:40%;
+  margin-right:10%;
+  float: left;
+}
+.primaryHeadingContainer{
+  margin-top: 100px;
+  margin-left: 50px;
+  max-width: 400px;
+}
+/*COLOR SCHEMES*/
+.darkBlue, .darkBlue a{
+  background-color: #253850;
+  color:white;
+}
+.yellow, .yellow a{
+  background-color: #E9B55D;
+  color:#253850;
+}
+.white, .white a{
+  background-color: white;
+  color:#253850;
+}
+.lightBlue, .lightBlue a{
+  background-color: #17517F;
+  color:white;
 }
 
 /*same styling for both layouts*/
@@ -67,8 +109,7 @@ ul.fullScreen li a{
   letter-spacing: -.1rem;
 }
 
-.fullScreen .slideLeft{
-  /*animation*/
+/*.fullScreen .slideLeft{
   animation-name: slideLeft;
   -webkit-animation-name: slideLeft;  
   animation-duration: .5s; 
@@ -77,7 +118,7 @@ ul.fullScreen li a{
   animation-timing-function: ease-in-out; 
   -webkit-animation-timing-function: ease-in-out;   
   visibility: visible !important;      
-}
+}*/
 
 @keyframes slideLeft {
   0% {
@@ -138,6 +179,7 @@ ul.topNav li a{
 
 /*SHOP HOVER COLORS*/
 .shopHover{
+  transition: all 1s;
   background-color: #253850;
 }
 .shopHover .header a{
@@ -218,3 +260,4 @@ ul.header li a:active{
   top:0;
   left:0;
 }
+
